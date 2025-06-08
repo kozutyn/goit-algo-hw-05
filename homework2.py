@@ -2,9 +2,8 @@ import re
 from typing import Callable
 
 def generator_numbers(text: str):
-    
-    for number in re.findall(r'\s+(\d+\.\d+)\s+', text):
-        yield float(number)
+    for number in re.findall(r'\s\d+\.\d+\s', text):
+        yield float(number.strip())
 
 def sum_profit(text: str, func: Callable) -> float:
     return sum(func(text))
