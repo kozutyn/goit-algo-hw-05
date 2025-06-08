@@ -1,4 +1,5 @@
 import re
+
 from typing import Callable, Generator
 
 def generator_numbers(text: str) -> Generator[float, None, None]:
