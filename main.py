@@ -6,7 +6,7 @@ def generator_numbers(text: str) -> Generator[float, None, None]:
     Генератор, извлекающий действительные числа из текста.
     Числа считаются только если они окружены пробелами с обеих сторон.
     """
-    pattern = r'(?<=\s)(\d+\.\d+)(?=\s)'
+    pattern = r'\s\d+\.\d+\s'
     for number in re.findall(pattern, text):
         yield float(number)
 
